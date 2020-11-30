@@ -1,11 +1,21 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import { Button } from 'react-native-elements'
 
 const HomeScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Home Screen</Text>
-      <Button title='Details Screen' onPress={()=>navigation.navigate('Details')}></Button>
+      <Button 
+        icon={{
+          name:'reorder',
+          size:20,
+          color:'white',
+          type:'material'
+        }}
+        title='Details Screen' 
+        onPress={()=>navigation.navigate('Details')}
+      ></Button>
     </View>
   );
 };

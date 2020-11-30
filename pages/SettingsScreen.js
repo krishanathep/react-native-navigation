@@ -1,11 +1,19 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import { Button } from 'react-native-elements'
 
 const SettingsScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Settings Screen</Text>
-      <Button title='Profile Screen' onPress={()=>navigation.navigate('Profile')}></Button>
+      <Button 
+      icon={{
+        name:'person',
+        size:20,
+        color:'white',
+        type:'material'
+      }}
+      title='Profile Screen' onPress={()=>navigation.navigate('Profile')}></Button>
     </View>
   );
 };
